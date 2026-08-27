@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the accompanying paper and this repository."
+title: "ROBINSSON-LCSIF"
+type: software
+version: 0.1.0
+date-released: 2026-08-27
+license: GPL-3.0-or-later
+repository-code: "https://github.com/OWNER/robinsson-lcsif"

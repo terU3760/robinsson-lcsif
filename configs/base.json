@@ -1,0 +1,42 @@
+{
+  "model": {
+    "text_encoder": "google-t5/t5-small",
+    "tokenizer": "google-t5/t5-small",
+    "max_text_length": 512,
+    "condition_dim": 256
+  },
+  "text_features": {"mode": "full_sequence"},
+  "social_circle": {"enabled": true, "sectors": 8, "channels": 64},
+  "data": {
+    "root": "data",
+    "dataset": "eth",
+    "metric": "meter",
+    "obs_len": 8,
+    "pred_len": 12,
+    "workers": 4
+  },
+  "diffusion": {
+    "scheduler": "lms",
+    "beta_start": 0.00085,
+    "beta_end": 0.012,
+    "beta_schedule": "scaled_linear",
+    "train_timesteps": 1000,
+    "inference_steps": 50
+  },
+  "training": {
+    "output_dir": "outputs/social-full",
+    "epochs": 300,
+    "batch_size": 64,
+    "gradient_accumulation": 2,
+    "learning_rate": 0.00016,
+    "weight_decay": 0.01,
+    "lr_scheduler": "cosine",
+    "warmup_steps": 500,
+    "max_grad_norm": 1.0,
+    "freeze_text_encoder": true,
+    "mixed_precision": "bf16",
+    "seed": 0
+  },
+  "evaluation": {"batch_size": 64, "mode": "deterministic_mean", "samples": 20, "seed": 77}
+}
+

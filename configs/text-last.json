@@ -1,0 +1,7 @@
+{
+  "extends": "base.json",
+  "text_features": {"mode": "last_token"},
+  "social_circle": {"enabled": false},
+  "model": {"condition_dim": 512},
+  "training": {"output_dir": "outputs/text-last"}
+}

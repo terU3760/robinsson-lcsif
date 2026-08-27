@@ -1,0 +1,7 @@
+{
+  "extends": "base.json",
+  "text_features": {"mode": "full_sequence"},
+  "social_circle": {"enabled": true},
+  "training": {"output_dir": "outputs/social-full"}
+}
+
